@@ -13,7 +13,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.transaction.Transactional;
 
 import org.hamcrest.Matchers;
 import org.jkd.prod.bsa.BsaApplication;
@@ -33,9 +32,6 @@ public class StatementPersistentTest {
 
 	@Autowired
 	private StatementRepository statementRepository;
-	
-	@Autowired
-	private TransactionRepository transactionRepository;
 	
 	@PersistenceContext
 	private EntityManager entityManager;
