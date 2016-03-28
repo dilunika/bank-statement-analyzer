@@ -1,0 +1,18 @@
+{
+  "name": "bank-statement-analyzer",
+  "version": "2.1.4",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.7",
+    "bootstrap": "~3.3.5",
+    "angular-animate": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "ngstorage": "^0.3.10",
+    "angular-gridster": "^0.13.5",
+    "font-awesome": "^4.5.0",
+    "angular-bootstrap": "^1.2.4"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0"
+  }
+}

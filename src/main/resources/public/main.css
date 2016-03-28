@@ -1,0 +1,139 @@
+body {
+    background-color: #666;
+    font-family: "Open Sans", sans-serif;
+}
+
+.header-panel {
+
+    padding: 20px;
+    background-color: #fff;
+}
+
+.item-noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.item-selectable:hover {
+    background-color: #555;
+}
+
+.side-menu {
+    float: left;
+    position: relative;
+    padding-top: 30px;
+    background-color: #444;
+    color: #eee;
+    min-height: 100vh;
+}
+
+.side-menu .btn:hover {
+    color: #ccc;
+}
+
+.side-menu-area ul {
+    padding-left: 0px;
+}
+
+.side-menu {
+    list-style-type: none;
+    vertical-align: top;
+}
+
+.side-menu ul {
+    display: inline;
+    list-style-type: none;
+    padding-left: 0;
+}
+.side-menu li {
+    line-height: 5em;
+    cursor: pointer;
+}
+
+.side-menu li div {
+    display: inline-block;
+    width: 90%;
+    padding-left: 16px;
+    font-size: 1.1em;
+}
+
+.side-menu-icon {
+    margin-right: 10px;
+    margin-left: 3px;
+}
+
+.side-menu-active-indicator {
+    float: right;
+    color: #ddd;
+    margin-right: 0px;
+    margin-top: 20px;
+}
+
+.main-panel {
+
+
+}
+
+.statement-details {
+    background-color: aliceblue;
+    min-height: 100vh;
+}
+
+.expence-distro-category {
+    background-color: red;
+    min-height: 50vh;
+    color: #eee;
+}
+
+.expence-distro-vendor {
+    background-color: green;
+    min-height: 50vh;
+    color: #eee;
+}
+
+.upload-widget {
+    
+    width: 100%;
+    min-height: 180px;
+    color: black;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.upload-widget-header {
+
+    background-color: brown;
+    color: white;
+    height: 32px;
+    line-height: 32px;
+}
+
+.upload-widget-icon {
+    padding: 5px;
+    margin-top: -2px;
+}
+
+.upload-widget-body {
+
+    padding: 10px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.align-right {
+    float: right;
+}
+
+.icon {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.content {
+    font-size: 1em;
+}

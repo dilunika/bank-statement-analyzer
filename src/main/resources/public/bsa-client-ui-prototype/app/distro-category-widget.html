@@ -1,0 +1,48 @@
+<div class="bsa-widget">
+
+    <div class="bsa-widget-header">
+        <i class="fa fa-pie-chart bsa-widget-icon"></i>
+        <span class="bsa-widget-title">
+            Expence Distribution by Category
+        </span>
+    </div>
+
+    <div class="bsa-widget-body">
+        <div id="chart" class="panel panel-default"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+
+    // Callback that creates and populates a data table,
+    // instantiates the pie chart, passes in the data and
+    // draws it.
+    function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Expence Category');
+        data.addColumn('number', 'Persentage');
+        data.addRows([
+            ['Groceries', 33],
+            ['Utility Bills', 15],
+            ['Rent', 27],
+            ['Entertainment', 10],
+            ['Other', 15]
+        ]);
+
+        // Set chart options
+        var options = {
+            'title': 'Statement Expence Distribution',
+            'width': 400,
+            'height': 250
+        };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart'));
+        chart.draw(data, options);
+    }
+</script>

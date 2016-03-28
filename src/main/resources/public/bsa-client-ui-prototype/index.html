@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Bank Statement Analyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="styles/main.css" rel="stylesheet">
+
+    <!-- JS Libraries -->
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+
+    <!-- Widgets -->
+    <script src="app/app.config.js"></script>
+    <script src="app/widgets/statement-uploader/bsa.statementuploader.js"></script>
+
+    <script>
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {
+            'packages': ['corechart', 'bar']
+        });
+        $(function() {
+            $("#statements").load("app/statements-widget.html");
+            $("#statement-details").load("app/statementdetails-widget.html");
+            $("#expence-distro-category").load("app/distro-category-widget.html");
+            $("#expence-distro-vendor").load("app/distro-vendor-widget.html");
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- header class="container-fluid">
+        <div class="row header-panel">
+            <div class="col-sm-12">
+                
+                <h1>
+                    <i class="fa fa-2x fa-university"></i>
+                    Expence Pal <small class="sub-heading">Bank Statement Analyzer</small>
+                </h1>
+            </div>
+        </div>
+    </header -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-sm-2 side-menu">
+                <div class="logo-area row">
+                    <div class="col-sm-6">
+                        <i class="fa fa-5x fa-university"></i>
+                    </div>
+                    <div class="col-sm-6 logo-title">
+                        Bank Statement Analyzer
+                    </div>    
+                </div>
+                <hr>
+                <ul>
+                    <li class="item-selectable">
+                        <div class="item-noselect">
+                            <i class="fa fa-2x fa-credit-card side-menu-icon"></i> Statements
+                        </div>
+                        <i class="fa fa-2x fa-caret-left side-menu-active-indicator"></i>
+                    </li>
+
+                    <li class="item-selectable">
+                        <div class="item-noselect">
+                            <i class="fa fa-2x fa-bar-chart side-menu-icon"></i> Analytics
+                        </div>
+                    </li>
+
+                    <li class="item-selectable">
+                        <div class="item-noselect">
+                            <i class="fa fa-2x fa-cogs side-menu-icon"></i> Settings
+                        </div>
+                    </li>
+
+                </ul>
+            </aside>
+            <div class="col-sm-10 main-panel">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div id="statements">
+                            <!-- Statements List & Uploader -->
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div id="statement-details">
+                            <!-- Statement Details -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="expence-distro-category" class="col-sm-6">
+                        <!-- Expence Distribution by Category -->
+                    </div>
+                    <div id="expence-distro-vendor" class="col-sm-6">
+                        <!-- Expence Distribution by Vendor -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
