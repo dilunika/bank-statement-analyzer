@@ -1,5 +1,5 @@
 export interface Transaction {
-    date: Date,
+    date: string,
     vendor: string,
     paymentType: PaymentType,
     amount: number

@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @Entity
 public class Statement {
@@ -21,8 +22,10 @@ public class Statement {
 	
 	private String name;
 	
+	@XmlJavaTypeAdapter(LocalDateAdapter.class)
 	private LocalDate fromDate;
 	
+	@XmlJavaTypeAdapter(LocalDateAdapter.class)
 	private LocalDate toDate;
 	
 	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)

@@ -13,26 +13,26 @@ export class AppComponent {
     statements: Statement[] = [
         {
             accountNumber:'01-002-333423-00', 
-            fromDate: new Date('2016-01-01'), 
-            toDate: new Date('2016-01-31'),
+            fromDate: '2016-01-01', 
+            toDate: '2016-01-31',
             transactions: [
-                {date: new Date('2016-01-01'),amount: 100.00,paymentType: PaymentType.CREDIT,vendor: ''}
+                {date: '2016-01-01',amount: 100.00,paymentType: PaymentType.CREDIT,vendor: ''}
             ]
         },
         {
             accountNumber:'01-002-333423-01', 
-            fromDate: new Date('2016-02-01'), 
-            toDate: new Date('2016-02-28'),
+            fromDate: '2016-02-01', 
+            toDate: '2016-02-28',
             transactions: [
-                {date: new Date('2016-01-01'),amount: 100.00,paymentType: PaymentType.CREDIT,vendor: ''}
+                {date: '2016-01-01',amount: 100.00,paymentType: PaymentType.CREDIT,vendor: ''}
             ]
         },
         {
             accountNumber:'01-002-333423-01', 
-            fromDate: new Date('2016-03-01'), 
-            toDate: new Date('2016-03-28'),
+            fromDate: '2016-03-01', 
+            toDate: '2016-03-28',
             transactions: [
-                {date: new Date('2016-01-01'),amount: 100.00,paymentType: PaymentType.CREDIT,vendor: ''}
+                {date: '2016-01-01',amount: 100.00,paymentType: PaymentType.CREDIT,vendor: ''}
             ]
         }
     ];

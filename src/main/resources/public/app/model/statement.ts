@@ -2,7 +2,7 @@ import {Transaction} from './transaction';
 
 export interface Statement {
     accountNumber: string,
-    fromDate: Date,
-    toDate: Date,
+    fromDate: string,
+    toDate: string,
     transactions: Transaction []
 }

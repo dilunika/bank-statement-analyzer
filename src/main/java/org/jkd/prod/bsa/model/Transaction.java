@@ -1,5 +1,6 @@
 package org.jkd.prod.bsa.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
@@ -15,7 +16,7 @@ public class Transaction {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
-	private LocalDateTime transactionTime;
+	private LocalDate transactionTime;
 	
 	private String paymentType;
 	
@@ -24,11 +25,11 @@ public class Transaction {
 	@ManyToOne
 	private Statement statement;
 
-	public LocalDateTime getTransactionTime() {
+	public LocalDate getTransactionTime() {
 		return transactionTime;
 	}
 
-	public void setTransactionTime(LocalDateTime transactionTime) {
+	public void setTransactionTime(LocalDate transactionTime) {
 		this.transactionTime = transactionTime;
 	}
 

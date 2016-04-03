@@ -121,7 +121,7 @@ public class StatementPersistentTest {
 			Transaction t = new Transaction();
 			t.setPaymentType(paymentType);
 			t.setAmount(ThreadLocalRandom.current().nextDouble(5000));
-			t.setTransactionTime(transactionTime);
+			t.setTransactionTime(date);
 			t.setStatement(statement);
 		
 			return t;
