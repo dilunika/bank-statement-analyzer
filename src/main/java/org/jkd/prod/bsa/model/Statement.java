@@ -11,7 +11,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @Entity
 public class Statement {
@@ -20,27 +19,17 @@ public class Statement {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
-	private String name;
+	private String accountNumber;
 	
-	@XmlJavaTypeAdapter(LocalDateAdapter.class)
 	private LocalDate fromDate;
 	
-	@XmlJavaTypeAdapter(LocalDateAdapter.class)
 	private LocalDate toDate;
 	
 	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	private List<Transaction> transactions = new ArrayList<Transaction>();
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public long getId() {
 		return id;
-	}
-
-	public String getName() {
-		return name;
 	}
 
 	public LocalDate getFromDate() {
@@ -67,10 +56,18 @@ public class Statement {
 		this.transactions = transactions;
 	}
 
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
 	@Override
 	public String toString() {
-		return "Statement [id=" + id + ", name=" + name + ", fromDate=" + fromDate + ", toDate=" + toDate
-				+ ", transactions=" + transactions + "]";
+		return "Statement [id=" + id + ", accountNumber=" + accountNumber + ", fromDate=" + fromDate + ", toDate="
+				+ toDate + ", transactions=" + transactions + "]";
 	}
 	
 	

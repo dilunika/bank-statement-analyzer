@@ -99,7 +99,7 @@ public class BsaApplication {
 
 		Statement generate() {
 			statement = new Statement();
-			statement.setName("Statement from " + fromDate.toString() + " to " + toDate.toString());
+			statement.setAccountNumber("00-099-09342340-00");
 			statement.setFromDate(fromDate);
 			statement.setToDate(toDate);
 			statement.setTransactions(transactions);
@@ -134,7 +134,7 @@ public class BsaApplication {
 			Transaction t = new Transaction();
 			t.setPaymentType(paymentType);
 			t.setAmount(ThreadLocalRandom.current().nextDouble(5000));
-			t.setTransactionTime(date);
+			t.setTransactionTime(transactionTime);
 			t.setStatement(statement);
 
 			return t;
