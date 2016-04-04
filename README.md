@@ -1,7 +1,12 @@
 
 # Bank Statement Analyzer
 
-This application will analyze your bank statement and will provide you a analytical report about your expences. This is a personal project I am working at the moment to get an idea about my expenses.
+This application will analyze your bank statement and will provide you a analytical report about your expenses. This is a personal project I am working at the moment to get an idea about my expenses and sharpen my knowledge on following set of technologies.
+
+1. Spring Boot & Microservices
+2. Angular 2 & Typescript
+3. Flex Box CSS
+4. SaaS
 
 ## Sketched Design
 
